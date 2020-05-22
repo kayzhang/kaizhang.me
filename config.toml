@@ -41,8 +41,8 @@ unsafe = true
 pagetitle = "Kai Zhang"
 copyright = "© 2020 Kai Zhang"
 copyrightUrl = "https://kaizhang.me/"
-faviconfile = "images/favicon.png"
-logofile = "images/logo.png"
+faviconfile = "/images/favicon.png"
+logofile = "/images/logo.jpg"
 posts_navigation = true
 uselatex = true
 # 使用 hugo 内置的高亮引擎而非 highlight.js
