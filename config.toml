@@ -1,4 +1,89 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseurl = "https://kaizhang.me/"
+publishDir = "public"
+title = "Kai Zhang | 张凯"
+author = "Kai Zhang"
+canonifyurls = true
+languagecode = "en-us"
+paginate = 3
 theme = "hugo-renga"
+
+enableEmoji = true
+hasCJKLanguage = true
+
+disqusShortname = "kaizhang01"
+
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+# 使用 permalinks 来格式化文章链接
+[permalinks]
+  blog = "/blog/:year/:month/:slug/"
+
+# 使 goldmark 渲染 markdown 时不忽略 HTML 代码
+# 参见：https://d.cosx.org/d/421422-hugomdhtml
+[markup.goldmark.renderer]
+unsafe = true
+
+# markup highlight 选项
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = false
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+
+
+[params]
+pagetitle = "Kai Zhang"
+copyright = "© 2020 Kai Zhang"
+copyrightUrl = "https://kaizhang.me/"
+faviconfile = "images/favicon.png"
+logofile = "images/logo.png"
+posts_navigation = true
+uselatex = true
+# 使用 hugo 内置的高亮引擎而非 highlight.js
+# highlightjs = true
+progressively = false
+
+github = "kayzhang"
+linkedin = "kai-zhang-duke"
+twitter = "kayzhang"
+email = "kaiwhu@gmail.com"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[[menu.primary]]
+identifier = "education"
+name = "Education"
+url = "/education/"
+weight = 1
+
+[[menu.primary]]
+identifier = "projects"
+name = "Projects"
+url = "/projects/"
+weight = 2
+
+[[menu.primary]]
+identifier = "blog"
+name = "Blog"
+url = "/blog/"
+weight = 3
+
+[[menu.primary]]
+identifier = "categories"
+name = "Categories"
+url = "/categories/"
+weight = 4
+
+[[menu.primary]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 5
