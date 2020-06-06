@@ -9,7 +9,7 @@ description: "Education experience of Kai Zhang"
 Aug 2018 - May 2020  
 Master of Science in Electrical and Computer Engineering  
 Teaching Assistant for Duke ECE 590-23 - Theory/Practice of Algorithm  
-ECE Merit Scholarship
+ECE Merit Scholarship  
 Field of Study: Software Engineering
 
 Coursework:
