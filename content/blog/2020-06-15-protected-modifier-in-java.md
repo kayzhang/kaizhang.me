@@ -1,6 +1,5 @@
 ---
 title: `Protected` Modifier in Java
-subtitle: 
 date: '2020-06-15'
 slug: protected-modifier-in-java
 categories:
