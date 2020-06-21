@@ -216,7 +216,7 @@ int main(void) {
 ### 3. Java 中的实现方式
 
 * 对应于 C++ 中的 `clone` 方法，Java 中 `Object` 类中定义了 [`clone`(https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#clone())。
-* 对应于 C++ 中的 `create` 方法，Java 中通过 `java.lang.reflect.Constructor` 中的 [`newInstance`] 方法实现，其中 `Constructor` 类的对象可以由 `java.lang.Class` 类中的 [`getConstructor`](public Constructor<T> getConstructor​(Class<?>... parameterTypes) throws NoSuchMethodException, SecurityException) 方法获得。详见 <<Core Java Volumn I>> 中的 5.7.1 小结。
+* Java 不需要类似 C++ 中 `create` 方法的实现方式，因为其可以直接通过 Reflection 机制获得需要的 constructor。具体为：Java 中通过 `java.lang.reflect.Constructor` 中的 [`newInstance`] 方法实现创建新对象，其中 `Constructor` 类的对象可以由 `java.lang.Class` 类中的 [`getConstructor`](public Constructor<T> getConstructor​(Class<?>... parameterTypes) throws NoSuchMethodException, SecurityException) 方法获得。详见 <<Core Java Volumn I>> 中的 5.7.1 小结。
 
 示例如下：
 
