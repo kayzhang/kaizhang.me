@@ -108,7 +108,7 @@ PlusExpression(const PlusExpression & rhs) {
 * What if we add another subclass called MinusExpression?
 * We have to implement this switch statement in copy constructor of every operation expression class!!
 
-### 2.3 理想的解决方案：Virtual Factory Method `create()` 和 `clone()`
+### 2.3 理想的解决方案：Virtual Factory Methods `create()` 和 `clone()`
 
 虽然 constructor 无法是定义为 virtual，但是我们可以实现 virtual 的成员方法：
 
@@ -119,7 +119,7 @@ PlusExpression(const PlusExpression & rhs) {
 
 实现如下：
 
-```
+```cpp
 #include <cstdlib>
 #include <iostream>
 
@@ -218,7 +218,7 @@ int main(void) {
 * 对应于 C++ 中的 `clone` 方法，Java 中 `Object` 类中定义了 [`clone`(https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#clone())。
 * 对应于 C++ 中的 `create` 方法，Java 中通过 `java.lang.reflect.Constructor` 中的 [`newInstance`] 方法实现，其中 `Constructor` 类的对象可以由 `java.lang.Class` 类中的 [`getConstructor`](public Constructor<T> getConstructor​(Class<?>... parameterTypes) throws NoSuchMethodException, SecurityException) 方法获得。详见 <<Core Java Volumn I>> 中的 5.7.1 小结。
 
-实例如下：
+示例如下：
 
 ```java
 import java.util.Random;
